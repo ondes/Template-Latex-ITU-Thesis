@@ -1,0 +1,186 @@
+% ---------------------------------------------------------------- %
+%                     LATEX Thesis Template	              		   %
+%                                                                  %
+%		         		Version 1.5.2                       	   %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% Prepared by ITU Informatics Institute	                           %
+%                                                                  %
+% Informatics Institute, ITU Ayazaga Campus                        %
+% Maslak-34469, İstanbul, Turkey                                   %
+% http://www.be.itu.edu.tr                                         %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% documentclass arguments:             							   %
+% [onluarkali,tekyonlu],[turkce,ingilizce],[yukseklisans,doktora], %
+% [bez,karton],[bilisim,fenbilimleri,sosyalbilimler,avrasya,enerji]%
+% Sample use: \documentclass[onluarkali,ingilizce,yukseklisans,    %
+% karton,fenbilimleri]{itutez}					  				   %
+% Other sample use: \documentclass[tekyonlu,ingilizce,	           %
+% yukseklisans,bez,bilisim]{itutez}			           			   %
+% onluarkali: twoside                     			  			   %
+% tekyonlu: oneside						 						   %
+% turkce: turkish						 						   %
+% ingilizce: english											   %
+% yukseklisans: masters											   %
+% doktora: phd							  						   %
+% bez: hardcover version					  					   %
+% karton: paperback version					  					   %
+% bilisim: informatics						  					   %
+% fenbilimleri: science and technology							   %
+% sosyalbilimler: social sciences				 				   %
+% avrasya: eurasia						 						   %
+% enerji: energy						   						   %
+% ---------------------------------------------------------------- %
+
+\documentclass[onluarkali,ingilizce,lisans,bez,ucakuzay]{thesis_itu}
+
+% ---------------------------------------------------------------- %
+% Pay attention to letter case. The structure is case sensitive    %
+% {Name}{SURNAME} means first letter of name is capital and that   %
+% all letters of surname are capital.                              %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% No titles, only Name and SURNAME must be written.      	       %
+% ---------------------------------------------------------------- %
+
+\yazar{Name}{SURNAME} 
+\ogrencino{702082003}
+
+% ---------------------------------------------------------------- %
+% If you do not use the structure, do not delete it. Just delete   %
+% the argument. \unvan{} means title.                              %
+% ---------------------------------------------------------------- %
+
+\unvan{(Any Profession)}
+ 
+% ---------------------------------------------------------------- %
+% For below, the first argument for Turkish, the second is for     %
+% English.       						   						   %
+% ---------------------------------------------------------------- %
+
+% ---------------------------------------------------------------- %
+% Only the first letters of words must be capital.		     	   %
+% ---------------------------------------------------------------- %
+
+\anabilimdali{U\c{c}ak ve Uzay M\"uhendisli\u{g}i Anabilim Dal{\i}}{Department of Astronautics and Aeronautics Engineering}
+\programi{U\c{c}ak ve Uzay M\"uhendisli\u{g}i Program{\i}}{Astronautics and Aeronautics Engineering Programme}
+
+% ---------------------------------------------------------------- %
+% For paperback version, the submission date to the faculty. For   %
+% hardcover (indigo/black) version, date of defense.		   	   %
+% ---------------------------------------------------------------- %
+
+\tarih{TEZ\.IN SAVUNULDU\u{G}U AY YIL}{MONTH YEAR OF DEFENSE}
+\tarihKucuk{Tezin savunuldu\u{g}u ay y\i l}{Month year of defense}
+
+% ---------------------------------------------------------------- %
+% Thesis advisor, title, thesis submission date, defense date      %
+% ---------------------------------------------------------------- %
+
+\tezyoneticisi{Prof. Dr. Name SURNAME}{Istanbul Technical University}   
+
+\baslik{TEZ BA\c SLI\u GI BURAYA GEL\. IR}{GEREKL\.I \.ISE \.IK\.INC\.I SATIR}{GEREKL\.I \.ISE \"U\c C\"UNC\"U SATIR,
+\"U\c{C} SATIRA SI\u{G}DIRINIZ}
+
+\title{THESIS TITLE HERE}{SECOND LINE IF NECESSARY}{THIRD LINE IF NECESSARY, FIT TITLE IN THREE LINES}
+
+% ---------------------------------------------------------------- %
+% The date of submission of the paperback to the department.	   %
+% ---------------------------------------------------------------- %
+
+\tezvermetarih{03 May\i s 2019}{03 May 2019} 
+
+\tezsavunmatarih{11 Haziran 2019}{11 June 2019}
+
+% ---------------------------------------------------------------- %
+% coadvisor and jury information. If you do not use all items,     %
+% leave the corresponding arguments blank such as                  %
+% \esdanismani{}{} 					           %
+% ---------------------------------------------------------------- %
+
+\esdanismani{Prof. Dr. Name SURNAME}{Istanbul Technical University}   
+
+\juriBir{Prof. Dr. Name SURNAME}{Y\i ld\i z Technical University}
+
+\juriIki{Prof. Dr. Name SURNAME}{Bo\u{g}azi\c{c}i University}
+
+\juriUc{Prof. Dr. Name SURNAME}{Gebze Institute of Technology}
+
+\juriDort{Prof. Dr. Name SURNAME}{\c{S}i\c{s}li Etfal Teaching Hospital}
+
+\juriBes{Prof. Dr. Name SURNAME}{Bilkent University}
+
+% ---------------------------------------------------------------- %
+% Packages and definitions to be used are given in the following   %   						   %
+% ---------------------------------------------------------------- %
+
+\input{defs}                                        
+
+% ---------------------------------------------------------------- %
+% For dedication page. Leave the argument blank if not used.	   %
+% ---------------------------------------------------------------- %
+
+\ithaf{To my family,}
+
+% ---------------------------------------------------------------- %
+% Form the below files						   					   %
+% ---------------------------------------------------------------- %
+
+\kisaltmalistesi{\input{abbreviations}}
+\sembollistesi{\input{symbols}}
+
+\onsoz{\input{foreword}}             
+\ozet{\input{summary_TR}}               
+\summary{\input{summary}}             
+
+\begin{document}
+
+% ---------------------------------------------------------------- %
+% Also form the below files. All corresponding inputs should point %
+% to a file. They are provided inside the archive                  %
+% ---------------------------------------------------------------- %
+
+\input{chapter_01}                                       
+\input{chapter_02}
+\input{chapter_03}
+\input{chapter_04}
+\input{chapter_05}
+\input{chapter_06}
+
+% ---------------------------------------------------------------- %
+% Form thesis_bib.bib to contain your references in bibtex format  %
+% use \cite command for citing your references                     %
+% ---------------------------------------------------------------- %
+
+\bibliographystyle{thesis_itubib}        
+\bibliography{thesis_bib}
+
+% ---------------------------------------------------------------- %
+% Appendix files. appendices_cover is the appendix title page.     %
+% ---------------------------------------------------------------- %
+
+\eklerkapak{}
+\input{appendices_cover}
+
+% ---------------------------------------------------------------- %
+% \eklerbolum{x} forms and appendix of x chapters. 				   %
+% ---------------------------------------------------------------- %
+
+\eklerbolum{0}
+\input{appendices}
+
+% ---------------------------------------------------------------- %
+% The summary page                                                 %
+% ---------------------------------------------------------------- %
+
+\ozgecmis{\input{resume}}
+\end{document}                      
+
+% ---------------------------------------------------------------- %
+% About this template: iletisim@be.itu.edu.tr                      %
+% It has been updated by senerta@itu.edu.tr & ondes@itu.edu.tar    %
+% ---------------------------------------------------------------- %
