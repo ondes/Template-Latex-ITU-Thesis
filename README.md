@@ -8,7 +8,7 @@ GeoGebra Math Apps: <https://www.geogebra.org>
 
 ### MATLAB Files:
 
-export_fig: <https://www.mathworks.com/matlabcentral/fileexchange/7173-grabit>
+export_fig: <https://www.mathworks.com/matlabcentral/fileexchange/23629-export_fig>
 
 MATLAB-To-TikZ: <https://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz>
 
