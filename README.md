@@ -1,5 +1,5 @@
 # Istanbul Technical University - LaTeX Thesis Template
-# İstanbul Teknik Üniversitesi (İTÜ) - LaTeX Tez Şablonu
+(İstanbul Teknik Üniversitesi (İTÜ) - LaTeX Tez Şablonu)
 
 ## Useful Links & Tools:
 
