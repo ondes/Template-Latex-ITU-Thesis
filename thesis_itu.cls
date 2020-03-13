@@ -940,7 +940,7 @@ KISALTMALAR\fi\normalfont}
     	   \hspace*{\kaydirmaboyuTR}
           \fi
           \underline{{\bf\th@EnstituUpper}}\\
-	  \hspace*{190pt} %FBE ingilizce yeni baslik icin
+	  \hspace*{140pt} %FBE ingilizce yeni baslik icin
           \underline{\MakeUppercase{\bf\th@Instituteiki}}\\ %FBE ingilizce yeni baslik icin
 	\end{textblock}
         \vspace*{55mm}
