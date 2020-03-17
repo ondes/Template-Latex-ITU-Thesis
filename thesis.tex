@@ -1,41 +1,54 @@
-% ---------------------------------------------------------------- %
-%                     LATEX Thesis Template	              		   %
-%                                                                  %
-%		         		Version 1.5.2                       	   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+%                     LATEX Thesis Template	              		    %
+%                                                                   %
+%		         		Version 1.6.0                       	    %
+% ----------------------------------------------------------------- %
 
-% ---------------------------------------------------------------- %
-% Prepared by ITU Informatics Institute	                           %
-%                                                                  %
-% Informatics Institute, ITU Ayazaga Campus                        %
-% Maslak-34469, İstanbul, Turkey                                   %
-% http://www.be.itu.edu.tr                                         %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Prepared by ITU Informatics Institute	                            %
+%                                                                   %
+% Informatics Institute, ITU Ayazaga Campus                         %
+% Maslak-34469, İstanbul, Turkey									%
+% http://www.be.itu.edu.tr											%
+% ----------------------------------------------------------------- %
 
-% ---------------------------------------------------------------- %
-% documentclass arguments:             							   %
-% [onluarkali,tekyonlu],[turkce,ingilizce],[yukseklisans,doktora], %
-% [bez,karton],[bilisim,fenbilimleri,sosyalbilimler,avrasya,enerji]%
-% Sample use: \documentclass[onluarkali,ingilizce,yukseklisans,    %
-% karton,fenbilimleri]{itutez}					  				   %
-% Other sample use: \documentclass[tekyonlu,ingilizce,	           %
-% yukseklisans,bez,bilisim]{itutez}			           			   %
-% onluarkali: twoside                     			  			   %
-% tekyonlu: oneside						 						   %
-% turkce: turkish						 						   %
-% ingilizce: english											   %
-% yukseklisans: masters											   %
-% doktora: phd							  						   %
-% bez: hardcover version					  					   %
-% karton: paperback version					  					   %
-% bilisim: informatics						  					   %
-% fenbilimleri: science and technology							   %
-% sosyalbilimler: social sciences				 				   %
-% avrasya: eurasia						 						   %
-% enerji: energy						   						   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Updated by	:													%
+% E. Baris Ondes: ondes@itu.edu.tr 	 OR ondesalt@pm.me				% 
+% Tamer Sener	: senerta@itu.edu.tr OR tamsener@gmail.com			%
+% Berkan Kacmaz	: kacmazb@itu.edu.tr OR kacmazberkan0@gmail.com		%
+% ----------------------------------------------------------------- %
 
-\documentclass[onluarkali,ingilizce,lisans,bez,ucakuzay]{thesis_itu}
+% ----------------------------------------------------------------- %
+% Please visit the following page for the current version:			%
+% https://github.com/ondes/Template-Latex-ITU-Thesis   				%
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% documentclass arguments:             							    %
+% [onluarkali,tekyonlu],[turkce,ingilizce],						    %
+% [lisans,yukseklisans,doktora], [bez,karton],					    %
+% [bilisim,fenbilimleri,sosyalbilimler,avrasya,enerji]			   	%
+% Sample use: \documentclass[onluarkali,ingilizce,yukseklisans,    	%
+% karton,fenbilimleri]{itutez}					  				   	%
+% Other sample use: \documentclass[tekyonlu,ingilizce,	           	%
+% yukseklisans,bez,bilisim]{itutez}			           			   	%
+% onluarkali: twoside                     			  			   	%
+% tekyonlu: oneside						 						   	%
+% turkce: turkish						 						   	%
+% ingilizce: english											   	%
+% yukseklisans: masters											   	%
+% doktora: phd							  						   	%
+% bez: hardcover version					  					    %
+% karton: paperback version					  					    %
+% bilisim: informatics						  					    %
+% fenbilimleri: science and technology							    %
+% sosyalbilimler: social sciences				 				    %
+% avrasya: eurasia						 						    %
+% enerji: energy						   						    %
+% ----------------------------------------------------------------- %
+
+\documentclass[onluarkali,ingilizce,yukseklisans,bez,ucakuzay]{thesis_itu}
 
 % ---------------------------------------------------------------- %
 % Pay attention to letter case. The structure is case sensitive    %
@@ -48,7 +61,7 @@
 % ---------------------------------------------------------------- %
 
 \yazar{Name}{SURNAME} 
-\ogrencino{702082003}
+\ogrencino{110110000}
 
 % ---------------------------------------------------------------- %
 % If you do not use the structure, do not delete it. Just delete   %
@@ -66,16 +79,16 @@
 % Only the first letters of words must be capital.		     	   %
 % ---------------------------------------------------------------- %
 
-\anabilimdali{U\c{c}ak ve Uzay M\"uhendisli\u{g}i Anabilim Dal{\i}}{Department of Astronautics and Aeronautics Engineering}
-\programi{U\c{c}ak ve Uzay M\"uhendisli\u{g}i Program{\i}}{Astronautics and Aeronautics Engineering Programme}
+\anabilimdali{Uçak ve Uzay Mühendisliği Anabilim Dalı}{Department of Astronautics and Aeronautics Engineering}
+\programi{Uçak ve Uzay Mühendisliği Programı}{Astronautics and Aeronautics Engineering Programme}
 
 % ---------------------------------------------------------------- %
 % For paperback version, the submission date to the faculty. For   %
 % hardcover (indigo/black) version, date of defense.		   	   %
 % ---------------------------------------------------------------- %
 
-\tarih{TEZ\.IN SAVUNULDU\u{G}U AY YIL}{MONTH YEAR OF DEFENSE}
-\tarihKucuk{Tezin savunuldu\u{g}u ay y\i l}{Month year of defense}
+\tarih{TEZİN SAVUNULDUĞU AY YIL}{MONTH YEAR OF DEFENSE}
+\tarihKucuk{Tezin savunulduğu ay yıl}{Month year of defense}
 
 % ---------------------------------------------------------------- %
 % Thesis advisor, title, thesis submission date, defense date      %
@@ -83,39 +96,42 @@
 
 \tezyoneticisi{Prof. Dr. Name SURNAME}{Istanbul Technical University}   
 
-\baslik{TEZ BA\c SLI\u GI BURAYA GEL\. IR}{GEREKL\.I \.ISE \.IK\.INC\.I SATIR}{GEREKL\.I \.ISE \"U\c C\"UNC\"U SATIR,
-\"U\c{C} SATIRA SI\u{G}DIRINIZ}
+\baslik{TEZ BAŞLIĞI BURAYA GELİR}
+{GEREKLİ İSE İKİNCİ SATIR}
+{GEREKLİ İSE ÜÇÜNCÜ SATIR, ÜÇ SATIRA SIĞDIRINIZ}
 
-\title{THESIS TITLE HERE}{SECOND LINE IF NECESSARY}{THIRD LINE IF NECESSARY, FIT TITLE IN THREE LINES}
+\title{THESIS TITLE HERE}
+{SECOND LINE IF NECESSARY}
+{THIRD LINE IF NECESSARY, FIT TITLE IN THREE LINES}
 
 % ---------------------------------------------------------------- %
 % The date of submission of the paperback to the department.	   %
 % ---------------------------------------------------------------- %
 
-\tezvermetarih{03 May\i s 2019}{03 May 2019} 
+\tezvermetarih{1 Mayıs 2020}{1 May 2020} 
 
-\tezsavunmatarih{11 Haziran 2019}{11 June 2019}
+\tezsavunmatarih{1 Haziran 2020}{1 June 2020}
 
-% ---------------------------------------------------------------- %
-% coadvisor and jury information. If you do not use all items,     %
-% leave the corresponding arguments blank such as                  %
-% \esdanismani{}{} 					           %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% coadvisor and jury information. If you do not use all items,     	%
+% leave the corresponding arguments blank such as                  	%
+% \esdanismani{}{} 					           						%
+% ----------------------------------------------------------------- %
 
 \esdanismani{Prof. Dr. Name SURNAME}{Istanbul Technical University}   
 
-\juriBir{Prof. Dr. Name SURNAME}{Y\i ld\i z Technical University}
+\juriBir{Prof. Dr. Name SURNAME}{Middle East Technical University}  
 
-\juriIki{Prof. Dr. Name SURNAME}{Bo\u{g}azi\c{c}i University}
+\juriIki{Prof. Dr. Name SURNAME}{Boğaziçi University}  
 
-\juriUc{Prof. Dr. Name SURNAME}{Gebze Institute of Technology}
+\juriUc{Prof. Dr. Name SURNAME}{Bilkent University}  
 
-\juriDort{Prof. Dr. Name SURNAME}{\c{S}i\c{s}li Etfal Teaching Hospital}
+\juriDort{Prof. Dr. Name SURNAME}{Sabancı University}  
 
-\juriBes{Prof. Dr. Name SURNAME}{Bilkent University}
+\juriBes{Prof. Dr. Name SURNAME}{Koç University}
 
 % ---------------------------------------------------------------- %
-% Packages and definitions to be used are given in the following   %   						   %
+% Packages and definitions to be used are given in the following   %
 % ---------------------------------------------------------------- %
 
 \input{defs}                                        
@@ -180,7 +196,10 @@
 \ozgecmis{\input{resume}}
 \end{document}                      
 
-% ---------------------------------------------------------------- %
-% About this template: iletisim@be.itu.edu.tr                      %
-% It has been updated by senerta@itu.edu.tr & ondes@itu.edu.tar    %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% About this template: iletisim@be.itu.edu.tr                       %
+% Updated by	:													%
+% E. Baris Ondes: ondes@itu.edu.tr 	 OR ondesalt@pm.me				% 
+% Tamer Sener	: senerta@itu.edu.tr OR tamsener@gmail.com			%
+% Berkan Kacmaz	: kacmazb@itu.edu.tr OR kacmazberkan0@gmail.com		%
+% ----------------------------------------------------------------- %
