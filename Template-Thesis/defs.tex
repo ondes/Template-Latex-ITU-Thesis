@@ -1,22 +1,23 @@
-%%%%%%				NEW INPUTS				%%%%%%%%
-\usepackage[T1]{fontenc} % For Turkish characters
-\usepackage[utf8]{inputenc}  % For Turkish characters
+%============================================== NEW INPUTS ==============================================
+\usepackage[T1]{fontenc} 				% For Turkish characters
+\usepackage[utf8]{inputenc}  			% For Turkish characters
 \usepackage[open,openlevel=1]{bookmark} % It is used to have bookmarks in the PDF file created
-% Abbreviations & Nomenc
+% Abbreviations & Nomenclature
 %\usepackage[refpage]{nomencl}
 %\makenomenclature
-% \usepackage{textcomp}
-% \usepackage{array}
-% \usepackage{lscape}
+%\usepackage{textcomp}
+%\usepackage{array}
+%\usepackage{lscape}
 %\usepackage{listings} % Required for insertion of code
-% \usepackage{xcolor}
+%\usepackage{xcolor}
 %\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+%\usepackage{biblatex}
 
-%%%%%%				ITU 					%%%%%%%%
+%====================================== ITU NEW PACKAGES INCLUDED ======================================
 \usepackage{color}
 \usepackage{times}
 \usepackage{amssymb,amsmath,mathptmx,amsbsy,bm}
-\usepackage{caption}            %%
+\usepackage{caption}            
 %\usepackage{floatflt}
 %\usepackage[dvipdfm]{graphicx}
 \usepackage{graphics}
@@ -24,28 +25,62 @@
 \usepackage{epsfig}
 \usepackage{enumerate}
 \usepackage{rotating}
-\usepackage{multirow}
-\usepackage{subfigure}
+\usepackage{multirow}					% Multirow in tables
+%\usepackage{subfigure} 				% This is obsolete, therefore use subcaption package instead - SBÖ
 \usepackage{colortbl}
 \usepackage{pstricks}
 \usepackage{pst-plot}
 \usepackage{cite}
 \usepackage{latexsym}
 %\usepackage{subeqn}
-\usepackage{rotating}
 %\usepackage{hyperref}
-\usepackage{hyperref} \hypersetup{hidelinks} % The line is added for hiding the links in document.
+\usepackage{hyperref}\hypersetup{hidelinks} % The line is added for hiding the links in document.
 %\usepackage{url}
 \usepackage{fixltx2e} % Bu paketi sembollerde text ler için subscript yazmakta yardımcı olması için ekliyoruz.
+%\usepackage{ulem} 			% That does destroy Dedication and Bibliography (Use the below version xpatch) - SBÖ 
+\usepackage{xpatch} 		% Added for TOC dot flush to the page number - SBÖ
+\usepackage[normalem]{ulem} % For special underline tricks at the top of kapak pages - SBÖ 
+\usepackage[bottom,multiple]{footmisc} 	% Add hang to align to the left - SBÖ (bottom,flushmargin)
+%\usepackage{fnpos} 					% Another footnote position package - SBÖ
+\setlength{\skip\footins}{1cm} 			% Placement of the last text from the top of the Footnote - SBÖ
+%\setlength{\skip\footins}{1\baselineskip}
+\setlength\footnotemargin{.35em} 		% Footnote indentation the first line from left margin - SBÖ
+\addtolength{\footnotesep}{1mm} 		% Distance change to 1 mm line with footnote text at the bottom - SBÖ
+%\setlength{\footnotesep}{.5\baselineskip}
+\usepackage{enumitem} 					% Used for bullets in the resume to flush left as in the word template - SBÖ
+\renewcommand\labelitemi{\normalsize$\bullet$} % Set the bullet size similar to the word template - SBÖ
+%\makeFNbottom 							% Used with fnpos package - SBÖ
+\usepackage{pdfpages} 					% http://ctan.org/pkg/pdfpages - SBÖ
+%\usepackage{fancyhdr} 					% http://ctan.org/pkg/fancyhdr - SBÖ
+%\usepackage{geometry}
+\usepackage{tikzpagenodes} 				% For landscape page numbering - SBÖ
+%\usepackage{setspace} 					% Provides support for setting the spacing between lines - SBÖ
+%\usepackage{showframe} 				% http://ctan.org/pkg/showframe - To show the margins in a frame on pages - SBÖ
+\usepackage{etoolbox}					% http://ctan.org/pkg/etoolbox - For removing default 50pt TOx stuffs from top - SBÖ
+\makeatletter 															% Used with etoolbox - SBÖ
+\patchcmd{\@makechapterhead}{\vspace*{50\p@}}{}{}{}						% Removes space above \chapter head
+\patchcmd{\@makeschapterhead}{\vspace*{50\p@}}{\vspace*{21.5mm}}{}{}	% Removes space above \chapter* head and add 21.5mm
+\makeatother
+\usepackage{longtable} 	% Include long tables in the text spreading more than one page - SBÖ
+\usepackage{hhline} 	% If desired to eliminate hline in the tables - SBÖ
+\usepackage{siunitx}
+%\usepackage{subcaption} % Make subfigure as Figure 1.1a style - SBÖ
+\usepackage[list=true,listformat=simple,position=below]{subcaption} % Make subfigure as Figure 1.1a style - SBÖ
+% Subfigure caption settings - SBÖ
+\DeclareCaptionLabelFormat{subfig}{\normalsize\figurename #1~\arabic{chapter}.\arabic{chapter}\alph{subfigure} :}
+%\DeclareCaptionListFormat{subfigure}{\arabic{chapter}.\arabic{chapter}\alph{subfigure}}
+\captionsetup[subfigure]{labelformat=subfig, size=normalsize}
 
-%Bold Equation Number, Unbold Reference
-%\makeatletter
-%\def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}}
+% Bold Equation Number, Unbold Reference
+\makeatletter
+\def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}} % All bold in eq. number incl. parentheses 
 %\renewcommand{\eqref}[1]{\textup{{\normalfont(\ref{#1}}\normalfont)}}
-%\makeatother
+\renewcommand{\eqref}[1]{\textup{\bf(\ref{#1})}} % All bold in eq. referencing with parentheses - SBÖ
+\makeatother
 
-%\renewcommand{\theequation}{{\bf\arabic{chapter}.\arabic{equation}}}
+%\renewcommand{\theequation}{{\bf\arabic{chapter}.\arabic{equation}}} % Bold equation, unbold reference - SBÖ
 
+%================================ MAKE THE CODE SHORTER - SOME EXAMPLES ================================
 \def\be{\begin{equation}} %
 \def\ee{\end{equation}}%
 \def\beq{\begin{eqnarray}}%

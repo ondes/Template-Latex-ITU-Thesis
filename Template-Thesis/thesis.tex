@@ -1,7 +1,7 @@
 % ----------------------------------------------------------------- %
 %                     LATEX Thesis Template	              		    %
 %                                                                   %
-%		         		Version 1.6.0                       	    %
+%		         		Version 1.6.1                       	    %
 % ----------------------------------------------------------------- %
 
 % ----------------------------------------------------------------- %
@@ -13,10 +13,11 @@
 % ----------------------------------------------------------------- %
 
 % ----------------------------------------------------------------- %
-% Updated by	:													%
-% E. Baris Ondes: ondes@itu.edu.tr 	 OR ondesalt@pm.me				% 
-% Tamer Sener	: senerta@itu.edu.tr OR tamsener@gmail.com			%
-% Berkan Kacmaz	: kacmazb@itu.edu.tr OR kacmazberkan0@gmail.com		%
+% Updated by	  :													%
+% E. Baris Ondes  : ondes@itu.edu.tr 	OR ondesalt@pm.me			% 
+% Tamer Sener	  : senerta@itu.edu.tr  OR tamsener@gmail.com		%
+% Berkan Kacmaz	  : kacmazb@itu.edu.tr  OR kacmazberkan0@gmail.com	%
+% S. Baris Ozturk : ozturksb@itu.edu.tr OR salihbaris@gmail.com		%
 % ----------------------------------------------------------------- %
 
 % ----------------------------------------------------------------- %
@@ -46,53 +47,54 @@
 % sosyalbilimler: social sciences				 				    %
 % avrasya: eurasia						 						    %
 % enerji: energy						   						    %
+% elektrikelektronik: electrical and electronics				    %
 % ----------------------------------------------------------------- %
 
-\documentclass[onluarkali,ingilizce,yukseklisans,bez,ucakuzay]{thesis_itu}
+\documentclass[onluarkali,ingilizce,yukseklisans,bez,fenbilimleri]{thesis_itu}
 
-% ---------------------------------------------------------------- %
-% Pay attention to letter case. The structure is case sensitive    %
-% {Name}{SURNAME} means first letter of name is capital and that   %
-% all letters of surname are capital.                              %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Pay attention to letter case. The structure is case sensitive     %
+% {Name}{SURNAME} means first letter of name is capital and that    %
+% all letters of surname are capital.                               %
+% ----------------------------------------------------------------- %
 
-% ---------------------------------------------------------------- %
-% No titles, only Name and SURNAME must be written.      	       %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% No titles, only Name and SURNAME must be written.      	        %
+% ----------------------------------------------------------------- %
 
-\yazar{Name}{SURNAME} 
-\ogrencino{110110000}
+\yazar{Name}{SURNAME}
+\ogrencino{101010101}
 
-% ---------------------------------------------------------------- %
-% If you do not use the structure, do not delete it. Just delete   %
-% the argument. \unvan{} means title.                              %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% If you do not use the structure, do not delete it. Just delete    %
+% the argument. \unvan{} means title.                               %
+% ----------------------------------------------------------------- %
 
 \unvan{(Any Profession)}
  
-% ---------------------------------------------------------------- %
-% For below, the first argument for Turkish, the second is for     %
-% English.       						   						   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% For below, the first argument for Turkish, the second is for      %
+% English.       						   						    %
+% ----------------------------------------------------------------- %
 
-% ---------------------------------------------------------------- %
-% Only the first letters of words must be capital.		     	   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Only the first letters of words must be capital.		     	    %
+% ----------------------------------------------------------------- %
 
-\anabilimdali{Uçak ve Uzay Mühendisliği Anabilim Dalı}{Department of Astronautics and Aeronautics Engineering}
-\programi{Uçak ve Uzay Mühendisliği Programı}{Astronautics and Aeronautics Engineering Programme}
+\anabilimdali{Elektrik Mühendisliği Anabilim Dalı}{Department of Electrical Engineering}
+\programi{Elektrik Mühendisliği Programı}{Electrical Engineering Programme}
 
-% ---------------------------------------------------------------- %
-% For paperback version, the submission date to the faculty. For   %
-% hardcover (indigo/black) version, date of defense.		   	   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% For paperback version, the submission date to the faculty. For    %
+% hardcover (indigo/black) version, date of defense.		   	    %
+% ----------------------------------------------------------------- %
 
 \tarih{TEZİN SAVUNULDUĞU AY YIL}{MONTH YEAR OF DEFENSE}
 \tarihKucuk{Tezin savunulduğu ay yıl}{Month year of defense}
 
-% ---------------------------------------------------------------- %
-% Thesis advisor, title, thesis submission date, defense date      %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Thesis advisor, title, thesis submission date, defense date       %
+% ----------------------------------------------------------------- %
 
 \tezyoneticisi{Prof. Dr. Name SURNAME}{Istanbul Technical University}   
 
@@ -104,9 +106,9 @@
 {SECOND LINE IF NECESSARY}
 {THIRD LINE IF NECESSARY, FIT TITLE IN THREE LINES}
 
-% ---------------------------------------------------------------- %
-% The date of submission of the paperback to the department.	   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% The date of submission of the paperback to the department.	    %
+% ----------------------------------------------------------------- %
 
 \tezvermetarih{1 Mayıs 2020}{1 May 2020} 
 
@@ -130,21 +132,21 @@
 
 \juriBes{Prof. Dr. Name SURNAME}{Koç University}
 
-% ---------------------------------------------------------------- %
-% Packages and definitions to be used are given in the following   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Packages and definitions to be used are given in the following    %
+% ----------------------------------------------------------------- %
 
 \input{defs}                                        
 
-% ---------------------------------------------------------------- %
-% For dedication page. Leave the argument blank if not used.	   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% For dedication page. Leave the argument blank if not used.	    %
+% ----------------------------------------------------------------- %
 
 \ithaf{To my family,}
 
-% ---------------------------------------------------------------- %
-% Form the below files						   					   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Form the below files						   					    %
+% ----------------------------------------------------------------- %
 
 \kisaltmalistesi{\input{abbreviations}}
 \sembollistesi{\input{symbols}}
@@ -155,10 +157,10 @@
 
 \begin{document}
 
-% ---------------------------------------------------------------- %
-% Also form the below files. All corresponding inputs should point %
-% to a file. They are provided inside the archive                  %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Also form the below files. All corresponding inputs should point  %
+% to a file. They are provided inside the archive.                  %
+% ----------------------------------------------------------------- %
 
 \input{chapter_01}                                       
 \input{chapter_02}
@@ -167,33 +169,33 @@
 \input{chapter_05}
 \input{chapter_06}
 
-% ---------------------------------------------------------------- %
-% Form thesis_bib.bib to contain your references in bibtex format  %
-% use \cite command for citing your references                     %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Form thesis_bib.bib to contain your references in bibtex format   %
+% use \cite command for citing your references.                     %
+% ----------------------------------------------------------------- %
 
-\bibliographystyle{thesis_itubib}        
-\bibliography{thesis_bib}
+\bibliographystyle{thesis_itubib}      % Designed .bst file 
+\bibliography{thesis_bib}			   % .bib file
 
-% ---------------------------------------------------------------- %
-% Appendix files. appendices_cover is the appendix title page.     %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% Appendix files. appendices_cover is the appendix title page.      %
+% ----------------------------------------------------------------- %
 
 \eklerkapak{}
 \input{appendices_cover}
 
-% ---------------------------------------------------------------- %
-% \eklerbolum{x} forms and appendix of x chapters. 				   %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% \eklerbolum{x} forms and appendix of x chapters. 				    %
+% ----------------------------------------------------------------- %
 
 \eklerbolum{0}
 \input{appendices}
 
-% ---------------------------------------------------------------- %
-% The summary page                                                 %
-% ---------------------------------------------------------------- %
+% ----------------------------------------------------------------- %
+% The summary page                                                  %
+% ----------------------------------------------------------------- %
 
-\ozgecmis{\input{resume}}
+\ozgecmis{\input{resume}} % Edge (Sırt) of the thesis at the very end.
 \end{document}                      
 
 % ----------------------------------------------------------------- %
@@ -202,4 +204,5 @@
 % E. Baris Ondes: ondes@itu.edu.tr 	 OR ondesalt@pm.me				% 
 % Tamer Sener	: senerta@itu.edu.tr OR tamsener@gmail.com			%
 % Berkan Kacmaz	: kacmazb@itu.edu.tr OR kacmazberkan0@gmail.com		%
+% S. Baris Ozturk : ozturksb@itu.edu.tr OR salihbaris@gmail.com		%
 % ----------------------------------------------------------------- %

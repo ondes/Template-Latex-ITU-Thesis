@@ -1,68 +1,99 @@
-\vspace{10mm}
-
-\newsavebox{\mysquare}
-\savebox{\mysquare}{\textcolor{black}{\rule[2.3pt]{3.4pt}{3.4pt}}}
-
+\vspace*{10mm}
 \setlength{\TPHorizModule}{10pt}
 \setlength{\TPVertModule}{10pt}
-\begin{textblock}{1}(40,10)
+\begin{textblock}{1}(43.25,15.75) % Photo is adusted flush to the right margin - SBÖ
 	\begin{figure}[p]
-		\includegraphics[scale=0.3,keepaspectratio=true]{./fig/photo}
+		\includegraphics[scale=0.35,keepaspectratio=true]{./fig/photo}
 		% photo.eps: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=14 14 279 359
-	\end{figure}
-	
+	\end{figure}	
 \end{textblock}
-\textbf{Name Surname:} \\
+\vspace*{30mm}
+\textbf{Name Surname\makebox[2.155cm]{\hfill \textbf{:}}}\hspace{0.225em} \\ % Adjust the colomn alignment - SBÖ
 
 \vspace{-3mm}
-\textbf{Place and Date of Birth:} \\
+\textbf{Place and Date of Birth\makebox[0.735cm]{\hfill \textbf{:}}}\hspace{0.225em} \\ % Adjust the colomn alignment - SBÖ
 
 \vspace{-3mm}
-\textbf{E-Mail:} \\
+\textbf{E-Mail\makebox[3.685cm]{\hfill \textbf{:}}}\hspace{0.225em} \\ % Adjust the colomn alignment - SBÖ
 
+\vspace{5mm}
 
-\textbf{EDUCATION:} 
+\renewcommand\labelitemi{\normalsize$\bullet$} 			% Adjust the size of the bullets - SBÖ
+
+\textbf{EDUCATION\makebox[2.41cm]{\hfill \textbf{:}}}  	% Adjust the colomn alignment - SBÖ
 \vspace{-3mm}
-\begin{itemize}
-	\item \textbf{B.Sc.:} Graduation year, University, Faculty, Department
-	\item \textbf{M.Sc.:} Graduation year, University, Faculty, Department
+
+\begin{itemize}[leftmargin=5.15cm,itemsep=-0.25em,labelsep=2mm] % Adjust margin to flush left, item sep., label sep. - SBÖ
+	\item [$\bullet$ \hspace{1em}\textbf{B.Sc.} \hspace{6.85em} \textbf{:}] Graduation year, Istanbul Technical University, Faculty of Electrical and Electronics, Department of Electrical Engineering
+	\item [$\bullet$ \hspace{1em}\textbf{M.Sc. \textcolor{red}{(If exists)}} \hspace{2.4em} \textbf{:}] Graduation year, Istanbul Technical University, Faculty of Electrical and Electronics, Department of Electrical Engineering
 \end{itemize}
 
 \textbf{PROFESSIONAL EXPERIENCE AND REWARDS:}   
 \vspace{-3mm}
-\begin{itemize}
-	\item 1950-1956 İstanbul Technical University at the Central Laboratory of Theoretical Physics.
+\begin{itemize}[leftmargin=0.7cm,itemsep=-0.25em,labelsep=5mm] % Adjust margin to flush left, item sep., label sep. - SBÖ
+	%\setlength{\itemindent}{-0.25em}
+	\item 1950-1956 Istanbul Technical University at the Central Laboratory of Theoretical Physics.
 	\item 1953 Nobel Prize for Physics
-	\item 1956 Completed Doctorate at İstanbul Technical University
+	\item 1956 Completed Doctorate at Istanbul Technical University
 \end{itemize}
 
 \textbf{PUBLICATIONS, PRESENTATIONS AND PATENTS ON THE THESIS:} 
 \vspace{-3mm}
-\begin{itemize}
-	\item Ganapuram S., Hamidov A., Demirel, M. C., Bozkurt E., Kındap U., Newton A.,
+\begin{itemize}[leftmargin=0.7cm,itemsep=0.5em,labelsep=5mm] % Adjust margin to flush left, item sep., label seperation - SBÖ
+	%\setlength{\itemindent}{-0.25em}
+	\item \textbf{Ganapuram S., Hamidov A., Demirel, M. C., Bozkurt E., Kındap U., Newton A.} % Bold authors font - SBÖ
 	2007. Erasmus Mundus Scholar's Perspective On Water And Coastal
 	Management Education In Europe. 
 	\textit{International Congress - River Basin Management}, 
-	March 22-24, 2007 Antalya, Turkey. (Sunum örneği)
+	March 22--24, 2007 Antalya, Turkey. \textcolor{red}{(Presentation Instance)}
 	
-	\item Satoğlu, Ş.I., Durmuşoğlu, M. B., Ertay, T. A., 2010. A Mathematical Model 
+	\item \textbf{Satoğlu, Ş.I., Durmuşoğlu, M. B., Ertay, T. A.} 2010. A Mathematical Model  % Bold authors font - SBÖ
 	And A Heuristic Approach For Design Of The Hybrid Manufacturing Systems 
 	To Facilitate One-Piece Flow, 
 	\textit{International Journal of Production Research,}
-	48(17), 5195-5220. (Makale örneği)
+	48(17), 5195--5220. \textcolor{red}{(Article Instance)}
 	
-	
-	\item  Chen, Z., 2013. Intelligent Digital Teaching And Learning All-In-One Machine,
+	\item  \textbf{Chen, Z.} 2013. Intelligent Digital Teaching And Learning All-In-One Machine, % Bold authors font - SBÖ
 	Has Projection Mechanism Whose Front End Is Connected With Supporting
 	Arm, And Base Shell Provided With Panoramic Camera That Is Connected With
-	Projector. Patent numarası: CN203102627-U (Patent örneği)
+	Projector. Patent numarası: CN203102627-U. \textcolor{red}{(Patent Instance)}
 \end{itemize}
 
-\newpage
+%\newpage
 
 \textbf{OTHER PUBLICATIONS, PRESENTATIONS AND PATENTS:} 
 \vspace{-3mm}
 % ---------------------------------------------------------------- %
 % Fotografli ve yayin listeli (yayini varsa) ozgecmis onerilir.    %
-% Fotograf ve adres sart degildir.				   %
+% Fotograf ve adres sart degildir.				                   %
 % ---------------------------------------------------------------- %
+
+%======================================== SIRT OF THE THESIS ========================================= - SBÖ
+\newpage % Last page is assigned for the SIRT of the Thesis 
+\thispagestyle{empty} % Remove the bottom page number
+% Definitions in sırt of the thesis
+\def\sirtyili{2020} % Year of the graduation
+\def\studentname{F. M. SURNAME} % F. and M. initials SURNAME
+\def\thesisthickness{25mm} % Enter the expected thickness of the thesis after the hardcover 
+
+\hspace*{75mm}
+\begin{tikzpicture}[remember picture,overlay]
+{\rotatebox[origin=c,x=23.35mm,y=-247.75mm]{90}{\draw [line width=0.01mm, black, dashed] (0mm,0mm) rectangle node{\normalsize \studentname} (65mm,\thesisthickness);}}
+
+{\rotatebox[origin=c,x=23.35mm,y=-247.75mm]{90}{\draw [line width=0.01mm, black ,dashed, text width=190mm, align=center] (67mm,0mm) rectangle node{\normalsize \Baslikspacing \Baslikbir~\Baslikiki~\Baslikuc} (193mm+65mm+2mm,\thesisthickness);}}
+
+{\rotatebox[origin=c,x=23.35mm,y=-247.75mm]{90}{\draw [line width=0.01mm, black ,dashed] (193mm+65mm+4mm,0mm) rectangle node{\normalsize \sirtyili} (296.5mm,\thesisthickness);}}
+
+{\rotatebox[origin=c,x=23.35mm,y=-247.75mm]{90}{\draw[black,line width=1mm] (64.5mm,0mm) -- (64.5mm,\thesisthickness);
+\draw[black,line width=1mm] (67.3mm,0mm) -- (67.3mm,\thesisthickness);
+}}
+
+{\rotatebox[origin=c,x=23.35mm,y=-247.75mm]{90}{\draw[black,line width=1mm] (193mm+64.5mm+2mm,0mm) -- (193mm+64.5mm+2mm,\thesisthickness);
+\draw[black,line width=1mm] (193mm+64.5mm+5mm,0mm) -- (193mm+64.5mm+5mm,\thesisthickness);
+}}
+% Four dashed lines added between double thick lines vertically
+\draw [line width=0.01mm, black, dashed] (0mm,-205mm) -- (0mm,-208mm);
+\draw [line width=0.01mm, black, dashed] (-\thesisthickness,-205mm) -- (-\thesisthickness,-208mm);
+\draw [line width=0.01mm, black, dashed] (0mm,-3.25mm) -- (0mm,-13mm);
+\draw [line width=0.01mm, black, dashed] (-\thesisthickness,-1mm) -- (-\thesisthickness,-13mm);
+\end{tikzpicture}
