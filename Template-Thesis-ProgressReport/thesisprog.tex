@@ -1,0 +1,177 @@
+% ----------------------------------------------------------------- %
+%            ITU LaTeX Thesis Progress Report Template	            %
+%                                                                   %
+%		         		Version 1.0                       	        %
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% Prepared by ITU Informatics Institute	                            %
+%                                                                   %
+% Informatics Institute, ITU Ayazaga Campus                         %
+% Maslak-34469, İstanbul, Turkey									%
+% http://www.be.itu.edu.tr											%
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% Updated by	  :													%
+% E. Baris Ondes  : ondes@itu.edu.tr 	OR ondesalt@pm.me			% 
+% Tamer Sener	  : senerta@itu.edu.tr  OR tamsener@gmail.com		%
+% Berkan Kacmaz	  : kacmazb@itu.edu.tr  OR kacmazberkan0@gmail.com	%
+% S. Baris Ozturk : ozturksb@itu.edu.tr OR salihbaris@gmail.com		%
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% Please visit the following page for the current version:			%
+% https://github.com/ondes/Template-Latex-ITU-Thesis-Progress-Report%
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% documentclass arguments:             							    %
+% [onluarkali,tekyonlu],[turkce,ingilizce],						    %
+% [lisans,yukseklisans,doktora],					                %
+% [bilisim,fenbilimleri,sosyalbilimler,avrasya,enerji]			   	%
+% Sample use: \documentclass[onluarkali,ingilizce,yukseklisans,    	%
+% fenbilimleri]{thesisprop_itu}					  				    %
+% Other sample use: \documentclass[tekyonlu,ingilizce,	           	%
+% yukseklisans,bilisim]{thesisprop_itu}			           			%
+% onluarkali: twoside                     			  			   	%
+% tekyonlu: oneside						 						   	%
+% turkce: turkish						 						   	%
+% ingilizce: english											   	%
+% yukseklisans: masters											   	%
+% doktora: phd							  						   	%
+% bilisim: informatics						  					    %
+% fenbilimleri: science and technology							    %
+% sosyalbilimler: social sciences				 				    %
+% avrasya: eurasia						 						    %
+% enerji: energy						   						    %
+% elektrikelektronik: electrical and electronics				    %
+% ----------------------------------------------------------------- %
+
+\documentclass[onluarkali,ingilizce,yukseklisans,fenbilimleri]{thesisprog_itu}
+
+% ----------------------------------------------------------------- %
+% Pay attention to letter case. The structure is case sensitive     %
+% {Student Name}{SURNAME} means first letter of name is capital     %
+% and that all letters of surname are capital.                      %
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% No titles, only Name and SURNAME must be written.      	        %
+% ----------------------------------------------------------------- %
+
+\yazar{Student Name}{SURNAME}
+\ogrencino{101010101}
+ 
+% ----------------------------------------------------------------- %
+% For below, the first argument for Turkish, the second is for      %
+% English.       						   						    %
+% ----------------------------------------------------------------- %
+
+% ----------------------------------------------------------------- %
+% Only the first letters of words must be capital.		     	    %
+% ----------------------------------------------------------------- %
+
+\anabilimdali{Elektrik Mühendisliği Anabilim Dalı}{Department of Electrical Engineering}
+\programi{Elektrik Mühendisliği Programı}{Electrical Engineering Programme}
+
+% ----------------------------------------------------------------- %
+% The progress report submission date in upper case letters         %
+% Place the report number without including th/st/nd                %
+% ----------------------------------------------------------------- %
+
+\reportno{1}
+\tarih{AY / AY YIL}{MONTH / MONTH YEAR}
+\tarihKucuk{Tez Önerisi Tarihi}{Month and Year}
+
+% ----------------------------------------------------------------- %
+% Thesis advisor, thesis title                                      %
+% ----------------------------------------------------------------- %
+
+\tezyoneticisi{Prof. Dr. Name SURNAME}{Istanbul Technical University}   
+
+\baslik{TEZ BAŞLIĞI BURAYA GELİR}
+{GEREKLİ İSE İKİNCİ SATIR}
+{GEREKLİ İSE ÜÇÜNCÜ SATIR, ÜÇ SATIRA SIĞDIRINIZ}
+
+\title{THESIS TITLE HERE} % If just first letters are capital: Thesis Title Here
+{SECOND LINE IF NECESSARY}
+{THIRD LINE IF NECESSARY, FIT TITLE IN THREE LINES}
+
+% ----------------------------------------------------------------- %
+% coadvisor and jury information. If you do not use all items,     	%
+% leave the corresponding arguments blank such as                  	%
+% \esdanismani{}{} 					           						%
+% ----------------------------------------------------------------- %
+
+\esdanismani{Prof. Dr. Name SURNAME}{Istanbul Technical University} 
+
+\juriBir{Prof. Dr. Name SURNAME}{Middle East Technical University}  
+
+\juriIki{Prof. Dr. Name SURNAME}{Boğaziçi University}  
+
+\juriUc{Prof. Dr. Name SURNAME}{Bilkent University}  
+
+\juriDort{Prof. Dr. Name SURNAME}{Sabancı University}  
+
+\juriBes{Prof. Dr. Name SURNAME}{Koç University}
+
+% ----------------------------------------------------------------- %
+% Packages and definitions to be used are given in the following    %
+% ----------------------------------------------------------------- %
+
+\input{defs}                                           
+
+\begin{document}
+
+% ----------------------------------------------------------------- %
+% Also form the below files. All corresponding inputs should point  %
+% to a file. They are provided inside the archive.                  %
+% ----------------------------------------------------------------- %
+
+\input{chapter_01}                                       
+\input{chapter_02}
+\input{chapter_03}
+\input{chapter_04}
+\input{chapter_05}
+\input{chapter_06}
+\input{chapter_07}
+\input{chapter_08}
+
+% ----------------------------------------------------------------- %
+% Form thesis_bib.bib to contain your references in bibtex format   %
+% use \cite command for citing your references.                     %
+% ----------------------------------------------------------------- %
+
+\bibliographystyle{thesis_itubib}      % Designed .bst file 
+\bibliography{thesis_bib}			   % .bib file
+
+% ----------------------------------------------------------------- %
+% Appendix files. appendices_cover is the appendix title page.      %   
+% If Appendix not available, comment all the related commands below %
+% ----------------------------------------------------------------- %
+
+\eklerkapak{}
+\input{appendices_cover}
+
+% ----------------------------------------------------------------- %
+% \eklerbolum{x} forms and appendix of x chapters. 				    %
+% ----------------------------------------------------------------- %
+
+\eklerbolum{0}
+\input{appendices}
+
+% ----------------------------------------------------------------- %
+% Additional pages can be added to the below section                %
+% ----------------------------------------------------------------- %
+
+\end{document}                      
+
+% ----------------------------------------------------------------- %
+% About this template: iletisim@be.itu.edu.tr                       %
+% Updated by	:													%
+% E. Baris Ondes: ondes@itu.edu.tr 	 OR ondesalt@pm.me				% 
+% Tamer Sener	: senerta@itu.edu.tr OR tamsener@gmail.com			%
+% Berkan Kacmaz	: kacmazb@itu.edu.tr OR kacmazberkan0@gmail.com		%
+% S. Baris Ozturk : ozturksb@itu.edu.tr OR salihbaris@gmail.com		%
+% ----------------------------------------------------------------- %
