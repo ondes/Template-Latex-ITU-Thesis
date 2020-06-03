@@ -8,13 +8,17 @@ This repo includes the following documents from [ITU Graduate School of Science 
 
 Also, [Graduation Project Interim Report Template](https://github.com/ondes/Template-Latex-ITU-Thesis/tree/master/Template-GraduationProject-InterimReport) prepared by [Dr. Salih Baris Ozturk](https://github.com/SBarisOzturk) is added.
 
-## Software Links:
+## Useful Links & Tools:
 
 - LaTeX: <https://www.latex-project.org/get/>
 
 - Writing Environment: <https://texstudio.org/>
 
 - Reference Manager - Mendeley: <https://www.mendeley.com/>
+
+- Connected Papers: <https://www.connectedpapers.com>
+
+Useful especially for literature review.
 
 - Inkscape: <https://inkscape.org/release/inkscape-1.0/>
 
@@ -28,20 +32,20 @@ TexText 1.0 is an extension providing the possibility to add and re-edit LaTeX/ 
 
 GNU Image Manipulation Program (GIMP) is a free & open source image editor with sophisticated tools for graphic designers, photographers, illustrators, and scientists.
 
-## Useful Links & Tools:
+- Mathpix Snip: <https://mathpix.com/>
 
-Mathpix Snip - Convert Images to LaTeX: <https://mathpix.com/>
+It convert equation from screenshots to LaTeX code.
 
-GeoGebra Math Apps: <https://www.geogebra.org>
-
-Connected Papers: <https://www.connectedpapers.com>
+- GeoGebra Math Apps: <https://www.geogebra.org>
 
 ### MATLAB Tools:
 
-export_fig: <https://www.mathworks.com/matlabcentral/fileexchange/23629-export_fig>
+- export_fig: <https://www.mathworks.com/matlabcentral/fileexchange/23629-export_fig>
 
-MATLAB-To-TikZ: <https://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz>
+- MATLAB-To-TikZ: <https://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz>
 
-M-code LaTeX Package: <https://www.mathworks.com/matlabcentral/fileexchange/8015-m-code-latex-package>
+- M-code LaTeX Package: <https://www.mathworks.com/matlabcentral/fileexchange/8015-m-code-latex-package>
 
-GRABIT - Extract data points from an image file: <https://www.mathworks.com/matlabcentral/fileexchange/7173-grabit>
+- GRABIT: <https://www.mathworks.com/matlabcentral/fileexchange/7173-grabit>
+
+Extract data points from an image file.
