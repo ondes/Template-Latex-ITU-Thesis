@@ -38,6 +38,16 @@ It convert equation from screenshots to LaTeX code.
 
 - GeoGebra Math Apps: <https://www.geogebra.org>
 
+- LaTeXDraw: <http://latexdraw.sourceforge.net/>
+
+- LaTeXiT: <https://www.chachatelier.fr/latexit/>
+
+- Tables Generator: <https://tablesgenerator.com/>
+
+Highly recommended for LaTeX and Markdown.
+
+
+
 ### MATLAB Tools:
 
 - export_fig: <https://www.mathworks.com/matlabcentral/fileexchange/23629-export_fig>
