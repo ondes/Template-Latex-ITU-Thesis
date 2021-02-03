@@ -221,27 +221,27 @@
 
 %================================= FACULTY AND INSTITUTES SETTINGS =================================== 
     \if@Bilisim
-      \def\th@Enstitu{B\.il\.i\c s\.im Enst\. it\"us\"u}
+      \def\th@Enstitu{B\.il\.i\c s\.im Enst\. itüsü}
       \def\th@Institute{Informatics Institute}
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@FenBilimleri
-      \def\th@Enstitu{Fen B\. il\. imler\. i Enst\. it\"us\"u}
+      \def\th@Enstitu{Fen B\. il\. imler\. i Enst\. itüsü}
       \def\th@Institute{Graduate School of Science}
       \def\th@Instituteiki{Engineering and Technology} 			% FBE ingilizce yeni baslik icin
     \fi
     \if@SosyalBilimler
-      \def\th@Enstitu{Sosyal B\. il\. imler Enst\. it\"us\"u}
+      \def\th@Enstitu{Sosyal B\. il\. imler Enst\. itüsü}
       \def\th@Institute{The Graduate School of Arts}            % To fill the text properly to the first line - SBÖ
       \def\th@Instituteiki{and Social Sciences} 				% Added for onay page simplicity - SBÖ
     \fi
     \if@Enerji
-      \def\th@Enstitu{Enerj\. i Enst\. it\"us\"u}
+      \def\th@Enstitu{Enerj\. i Enst\. itüsü}
       \def\th@Institute{Institute of Energy}
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@Avrasya
-      \def\th@Enstitu{Avrasya Yer B\. il\. imler\. i Enst\. it\"us\"u}
+      \def\th@Enstitu{Avrasya Yer B\. il\. imler\. i Enst\. itüsü}
       \def\th@Institute{Eurasia Institute of}                   % To fill the text properly to the first line - SBÖ
       \def\th@Instituteiki{Earth Sciences} 						% Added for onay page simplicity - SBÖ
     \fi
@@ -313,7 +313,7 @@
   \fi
   \if@YuksekLisans
     \def\TezSeviyesi{M.Sc. THESIS}
-    \def\TezSeviyesiTR{Y\"UKSEK L{\.I}SANS TEZ{\.I}}
+    \def\TezSeviyesiTR{YüKSEK L{\.I}SANS TEZ{\.I}}
   \fi
   \if@Lisans
     \def\TezSeviyesi{GRADUATION THESIS}
@@ -1212,14 +1212,14 @@ KISALTMALAR\fi\normalfont}
 	
 	\begin{textblock*}{\textwidth}[0,0](40mm,230mm)
 		\centering
-		\th@titleFtSz {Tez Dan{\i}\c{s}man{\i}}: \th@titleFtSz \th@TezYoneticisi \\
-		%\ifthenelse{\equal{\th@esdanisman}{}}{}{ \bf{(Varsa) E\c{s} Dan\i \c{s}man:} \bf{\th@esdanisman} \\}
+		\th@titleFtSz {Tez Danışmanı}: \th@titleFtSz \th@TezYoneticisi \\
+		%\ifthenelse{\equal{\th@esdanisman}{}}{}{ \bf{(Varsa) Eş Dan\i şman:} \bf{\th@esdanisman} \\}
 	\end{textblock*}
 	
 	\begin{textblock*}{\textwidth}[0,0](40mm,235mm)
 		\centering
-		%\th@titleFtSz {Tez Dan{\i}\c{s}man{\i}}: \th@titleFtSz \th@TezYoneticisi \\
-		\ifthenelse{\equal{\th@esdanisman}{}}{}{ \bf{(Varsa) E\c{s} Dan\i \c{s}man:} \bf{\th@esdanisman} \\}
+		%\th@titleFtSz {Tez Danışmanı}: \th@titleFtSz \th@TezYoneticisi \\
+		\ifthenelse{\equal{\th@esdanisman}{}}{}{ \bf{(Varsa) Eş Dan\i şman:} \bf{\th@esdanisman} \\}
 	\end{textblock*}
 	
 	\begin{textblock*}{\textwidth}[0,0](40mm,260mm)
@@ -1248,7 +1248,7 @@ KISALTMALAR\fi\normalfont}
 \begin{textblock*}{\textwidth}[0,0](40mm,100.5mm)
 	\begin{tabular}{@{}p{33mm} l l}
 		\bf{Thesis Advisor :}& \bf{\th@TezYoneticisi} & 
-		\hspace*{44pt}\hfill.............................. \\		% Matching to the word template - SBÖ
+		\hspace*{44pt}\hfill ..............................\\		% Matching to the word template - SBÖ
 		& \th@TezYoneticisiUniv  &  \\
 		\ifthenelse{\equal{\th@esdanisman}{}}{}{   &  &  \\
 			&  &  \\
@@ -1285,7 +1285,6 @@ KISALTMALAR\fi\normalfont}
 		&  &  \\
 	\end{tabular}
 \end{textblock*}
-	
 
 \begin{textblock*}{\textwidth}[0,0](40mm,260mm)
 	\begin{tabular}{@{}l l}
@@ -1297,60 +1296,60 @@ KISALTMALAR\fi\normalfont}
 	\else
 	
 \begin{textblock*}{\textwidth}[0,0](40mm,50.5mm)
-	\.IT\"U, \th@Enstitu'n\"un \th@ogrencino\ numaral{\i} \if@Doktora Doktora\ \fi 
-	\if@YuksekLisans Y\"uksek Lisans\ \fi \if@Lisans Lisans\ \fi\ \"O\u{g}rencisi 
+	\.ITü, \th@Enstitu'nün \th@ogrencino\ numaralı \if@Doktora Doktora\ \fi 
+	\if@YuksekLisans Yüksek Lisans\ \fi \if@Lisans Lisans\ \fi\ öğrencisi 
 	{\th@isimsoyisim}, ilgili 
-	y\"onetmeliklerin belirledi\u{g}i gerekli t\"um \c{s}artlar{\i} yerine getirdikten
-	sonra haz{\i}rlad{\i}\u{g}{\i} 
+	yönetmeliklerin belirlediği gerekli tüm şartları yerine getirdikten
+	sonra hazırladığı 
 	{``\Baslikbir\ifthenelse{\equal{\Baslikiki}{}}{}{   
 	\Baslikiki\ifthenelse{\equal{\Baslikuc}{}}{}{\ 
 	\Baslikuc}}''}
-	ba\c{s}\-l\i k\-l{\i}
-	tezini a\c{s}a\u{g}\i daki imzalar{\i} olan j\"uri \"on\"unde
-	ba\c{s}ar{\i} ile sunmu\c{s}tur.
+	başlıklı
+	tezini aşağıdaki imzaları olan jüri önünde
+	başarı ile sunmuştur.
 \end{textblock*}
 
 \begin{textblock*}{\textwidth}[0,0](40mm,100.5mm)
 	\begin{tabular}{@{}p{33mm} l l}
-		\bf{Tez Dan\i \c{s}man{\i} :}& \bf{\th@TezYoneticisi} & 
-		.............................. \\
+		\bf{Thesis Advisor :}& \bf{\th@TezYoneticisi} & 
+		\hspace*{44pt} \hfill........................  \\		% Matching to the word template - SBÖ
 		& \th@TezYoneticisiUniv  &  \\
 		\ifthenelse{\equal{\th@esdanisman}{}}{}{   &  &  \\
 			&  &  \\
-			\bf{E\c{s} Dan\i \c{s}man :}& \bf{\th@esdanisman} & 
-			.............................. \\
+			\bf{Co-advisor :}& \bf{\th@esdanisman} & 
+	\hspace*{44pt}\hfill........................   \\	% Matching to the word template - SBÖ
 			& \th@esdanismanuniv  &  \\}
 		&  &  \\
 		&  &  \\
-		\bf{J\"uri \"Uyeleri :}& \bf{\th@juribir} & 
-		.............................. \\
+		\bf{Jury Members :}& \bf{\th@juribir} & 
+\hspace*{44pt}	\hfill........................     \\		% Matching to the word template - SBÖ
 		& \th@juribiruniv  &  \\
 		&  &  \\
 		&  &  \\
 		& \bf{\th@juriiki} & 
-		.............................. \\
+\hspace*{44pt}	\hfill........................   \\		% Matching to the word template - SBÖ
 		& \th@juriikiuniv  &  \\
 		&  &  \\
 		&  &  \\
-		& \bf{\th@juriuc} & 
-		.............................. \\
-		& \th@juriucuniv  &  \\
+		\ifthenelse{\equal{\th@juriuc}{}}{}{ & 
+	  \bf{\th@juriuc} & 
+	\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
+		& \th@juriucuniv  &  \\}
 		&  &  \\
 		&  &  \\
 		\ifthenelse{\equal{\th@juridort}{}}{}{ & 
 			\bf{\th@juridort} & 
-			.............................. \\
+	\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
 			& \th@juridortuniv  &  \\}
 		&  &  \\
 		&  &  \\
-		\ifthenelse{\equal{\th@juribes}{}}{}{ & \bf{\th@juribes} 
-			& 
-			.............................. \\
+		\ifthenelse{\equal{\th@juribes}{}}{}{ & \bf{\th@juribes} & 
+		\hspace*{44pt}	\hfill........................\\	% Matching to the word template - SBÖ
 			& \th@juribesuniv  &  \\}
 		&  &  \\
 		&  &  \\
 	\end{tabular}
-\end{textblock*}	
+\end{textblock*}
 
 \begin{textblock*}{\textwidth}[0,0](40mm,260mm)
 	\begin{tabular}{@{}l l}
@@ -1402,7 +1401,7 @@ KISALTMALAR\fi\normalfont}
          \th@titleFtSz\Baslikspacing \th@baslikbir \\
          \th@titleFtSz\Baslikspacing \th@baslikiki \\
          \th@titleFtSz\Baslikspacing \th@baslikuc \\
-             \vspace*{6pt}\\
+             \vspace*{18pt}\\
          \th@titleFtSz\abstractname\ \\
              %\\
         \end{tabular}
@@ -1414,7 +1413,7 @@ KISALTMALAR\fi\normalfont}
 %   \th@ChapterStyle \abstractname\ \\
 %   \end{list}
     \singlespacing
-    \vspace*{6pt}
+    \vspace*{18pt}
     \sloppy
     \th@ozetStash   % the actual ozet
 }
@@ -1429,13 +1428,13 @@ KISALTMALAR\fi\normalfont}
          \th@titleFtSz\Baslikspacing \th@Titlebir \\
          \th@titleFtSz\Baslikspacing \th@Titleiki \\
          \th@titleFtSz\Baslikspacing \th@Titleuc \\
-              \vspace*{6pt}\\
+              \vspace*{18pt}\\
          \th@titleFtSz\summaryname\ \\
               %\\
         \end{tabular}
        \end{center}
     \singlespacing
-    \vspace*{6pt}
+    \vspace*{18pt}
     \sloppy
     \th@abstractStash   % the actual abstract
 }
