@@ -220,28 +220,28 @@
 \newcommand*{\unvan}[1]{\th@StoreIn{\th@Unvan}{#1}}
 
 %================================= FACULTY AND INSTITUTES SETTINGS =================================== 
-    \if@Bilisim
-      \def\th@Enstitu{B\.il\.i\c s\.im Enst\. itüsü}
+     \if@Bilisim
+      \def\th@Enstitu{B\.il\.i\c s\.im Enst\. it\"us\"u}
       \def\th@Institute{Informatics Institute}
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@FenBilimleri
-      \def\th@Enstitu{Fen B\. il\. imler\. i Enst\. itüsü}
+      \def\th@Enstitu{Fen B\. il\. imler\. i Enst\. it\"us\"u}
       \def\th@Institute{Graduate School of Science}
       \def\th@Instituteiki{Engineering and Technology} 			% FBE ingilizce yeni baslik icin
     \fi
     \if@SosyalBilimler
-      \def\th@Enstitu{Sosyal B\. il\. imler Enst\. itüsü}
+      \def\th@Enstitu{Sosyal B\. il\. imler Enst\. it\"us\"u}
       \def\th@Institute{The Graduate School of Arts}            % To fill the text properly to the first line - SBÖ
       \def\th@Instituteiki{and Social Sciences} 				% Added for onay page simplicity - SBÖ
     \fi
     \if@Enerji
-      \def\th@Enstitu{Enerj\. i Enst\. itüsü}
+      \def\th@Enstitu{Enerj\. i Enst\. it\"us\"u}
       \def\th@Institute{Institute of Energy}
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@Avrasya
-      \def\th@Enstitu{Avrasya Yer B\. il\. imler\. i Enst\. itüsü}
+      \def\th@Enstitu{Avrasya Yer B\. il\. imler\. i Enst\. it\"us\"u}
       \def\th@Institute{Eurasia Institute of}                   % To fill the text properly to the first line - SBÖ
       \def\th@Instituteiki{Earth Sciences} 						% Added for onay page simplicity - SBÖ
     \fi
@@ -1219,7 +1219,7 @@ KISALTMALAR\fi\normalfont}
 	\begin{textblock*}{\textwidth}[0,0](40mm,235mm)
 		\centering
 		%\th@titleFtSz {Tez Danışmanı}: \th@titleFtSz \th@TezYoneticisi \\
-		\ifthenelse{\equal{\th@esdanisman}{}}{}{ \bf{(Varsa) Eş Dan\i şman:} \bf{\th@esdanisman} \\}
+		\ifthenelse{\equal{\th@esdanisman}{}}{}{ \bf{(Varsa) Eş Danışman:} \bf{\th@esdanisman} \\}
 	\end{textblock*}
 	
 	\begin{textblock*}{\textwidth}[0,0](40mm,260mm)
@@ -1248,38 +1248,40 @@ KISALTMALAR\fi\normalfont}
 \begin{textblock*}{\textwidth}[0,0](40mm,100.5mm)
 	\begin{tabular}{@{}p{33mm} l l}
 		\bf{Thesis Advisor :}& \bf{\th@TezYoneticisi} & 
-		\hspace*{44pt}\hfill ..............................\\		% Matching to the word template - SBÖ
+		\hspace*{44pt} \hfill........................  \\		% Matching to the word template - SBÖ
 		& \th@TezYoneticisiUniv  &  \\
 		\ifthenelse{\equal{\th@esdanisman}{}}{}{   &  &  \\
 			&  &  \\
 			\bf{Co-advisor :}& \bf{\th@esdanisman} & 
-			\hspace*{44pt}\hfill.............................. \\	% Matching to the word template - SBÖ
+			\hspace*{44pt}\hfill........................   \\	% Matching to the word template - SBÖ
 			& \th@esdanismanuniv  &  \\}
 		&  &  \\
 		&  &  \\
 		\bf{Jury Members :}& \bf{\th@juribir} & 
-		\hspace*{44pt}\hfill.............................. \\		% Matching to the word template - SBÖ
+		\hspace*{44pt}	\hfill........................     \\		% Matching to the word template - SBÖ
 		& \th@juribiruniv  &  \\
 		&  &  \\
 		&  &  \\
-		& \bf{\th@juriiki} & 
-		\hspace*{44pt}\hfill.............................. \\		% Matching to the word template - SBÖ
-		& \th@juriikiuniv  &  \\
+		\ifthenelse{\equal{\th@juriiki}{}}{}{ & 
+			\bf{\th@juriiki} & 
+			\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
+	 	& \th@juriikiuniv  &  \\}
 		&  &  \\
-		&  &  \\
-		& \bf{\th@juriuc} & 
-		\hspace*{44pt}\hfill.............................. \\		% Matching to the word template - SBÖ
-		& \th@juriucuniv  &  \\
+	    	&  &  \\	
+		\ifthenelse{\equal{\th@juriuc}{}}{}{ & 
+			\bf{\th@juriuc} & 
+			\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
+		& \th@juriucuniv  &  \\}
 		&  &  \\
 		&  &  \\
 		\ifthenelse{\equal{\th@juridort}{}}{}{ & 
 			\bf{\th@juridort} & 
-			\hspace*{44pt}\hfill.............................. \\	% Matching to the word template - SBÖ
+			\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
 			& \th@juridortuniv  &  \\}
 		&  &  \\
 		&  &  \\
 		\ifthenelse{\equal{\th@juribes}{}}{}{ & \bf{\th@juribes} & 
-			\hspace*{44pt}\hfill.............................. \\	% Matching to the word template - SBÖ
+			\hspace*{44pt}	\hfill........................\\	% Matching to the word template - SBÖ
 			& \th@juribesuniv  &  \\}
 		&  &  \\
 		&  &  \\
@@ -1296,7 +1298,7 @@ KISALTMALAR\fi\normalfont}
 	\else
 	
 \begin{textblock*}{\textwidth}[0,0](40mm,50.5mm)
-	\.ITü, \th@Enstitu'nün \th@ogrencino\ numaralı \if@Doktora Doktora\ \fi 
+	İTÜ, \th@Enstitu'nün \th@ogrencino\ numaralı \if@Doktora Doktora\ \fi 
 	\if@YuksekLisans Yüksek Lisans\ \fi \if@Lisans Lisans\ \fi\ öğrencisi 
 	{\th@isimsoyisim}, ilgili 
 	yönetmeliklerin belirlediği gerekli tüm şartları yerine getirdikten
@@ -1311,45 +1313,46 @@ KISALTMALAR\fi\normalfont}
 
 \begin{textblock*}{\textwidth}[0,0](40mm,100.5mm)
 	\begin{tabular}{@{}p{33mm} l l}
-		\bf{Thesis Advisor :}& \bf{\th@TezYoneticisi} & 
-		\hspace*{44pt} \hfill........................  \\		% Matching to the word template - SBÖ
+		\bf{Tez Danışmanı :}& \bf{\th@TezYoneticisi} & 
+		\hspace*{44pt}\hfill........................ \\
 		& \th@TezYoneticisiUniv  &  \\
 		\ifthenelse{\equal{\th@esdanisman}{}}{}{   &  &  \\
 			&  &  \\
-			\bf{Co-advisor :}& \bf{\th@esdanisman} & 
-	\hspace*{44pt}\hfill........................   \\	% Matching to the word template - SBÖ
+			\bf{Eş Danışman :}& \bf{\th@esdanisman} & 
+			\hspace*{44pt}\hfill........................ \\
 			& \th@esdanismanuniv  &  \\}
 		&  &  \\
 		&  &  \\
-		\bf{Jury Members :}& \bf{\th@juribir} & 
-\hspace*{44pt}	\hfill........................     \\		% Matching to the word template - SBÖ
-		& \th@juribiruniv  &  \\
+		\bf{Jüri Üyeleri :}& \bf{\th@juribir} & 
+			\hspace*{44pt}\hfill........................ \\
+			& \th@juribiruniv  &  \\
 		&  &  \\
 		&  &  \\
 		& \bf{\th@juriiki} & 
-\hspace*{44pt}	\hfill........................   \\		% Matching to the word template - SBÖ
-		& \th@juriikiuniv  &  \\
+			\hspace*{44pt}\hfill........................ \\
+			& \th@juriikiuniv  &  \\
 		&  &  \\
 		&  &  \\
 		\ifthenelse{\equal{\th@juriuc}{}}{}{ & 
-	  \bf{\th@juriuc} & 
-	\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
-		& \th@juriucuniv  &  \\}
+			\bf{\th@juriuc} & 
+			\hspace*{44pt}\hfill........................ \\
+			& \th@juriucuniv  &  \\}
 		&  &  \\
 		&  &  \\
 		\ifthenelse{\equal{\th@juridort}{}}{}{ & 
 			\bf{\th@juridort} & 
-	\hspace*{44pt}\hfill........................  \\	% Matching to the word template - SBÖ
+			\hspace*{44pt}\hfill........................ \\
 			& \th@juridortuniv  &  \\}
 		&  &  \\
 		&  &  \\
-		\ifthenelse{\equal{\th@juribes}{}}{}{ & \bf{\th@juribes} & 
-		\hspace*{44pt}	\hfill........................\\	% Matching to the word template - SBÖ
+		\ifthenelse{\equal{\th@juribes}{}}{}{ & \bf{\th@juribes} 
+			& 
+			\hspace*{44pt}\hfill........................ \\
 			& \th@juribesuniv  &  \\}
 		&  &  \\
 		&  &  \\
 	\end{tabular}
-\end{textblock*}
+\end{textblock*}	
 
 \begin{textblock*}{\textwidth}[0,0](40mm,260mm)
 	\begin{tabular}{@{}l l}
