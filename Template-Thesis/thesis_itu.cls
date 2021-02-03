@@ -1237,7 +1237,7 @@ KISALTMALAR\fi\normalfont}
 	\singlespacing
 	\if@Ingilizce 			
 	\begin{textblock*}{\textwidth}[0,0](40mm,50.5mm)
-	{\bf\th@isimsoyisim}, {\bf a} \if@Doktora {\bf Ph.D.}\ \fi  \if@YuksekLisans  {\bf M.Sc.}\ \fi \if@Lisans {\bf B.Sc.}\ \fi student of
+	{\th@isimsoyisim}, {\bf a} \if@Doktora {\bf Ph.D.}\ \fi  \if@YuksekLisans  {\bf M.Sc.}\ \fi \if@Lisans {\bf B.Sc.}\ \fi student of
 	ITU~\if@YuksekLisans {\bf\th@Institute~\th@Instituteiki\ \fi \if@Doktora \th@Institute~\th@Instituteiki\ \fi \if@Lisans \if@ElektrikElektronik \th@Institute~\th@Instituteiki \fi \fi}student ID \th@ogrencino,\ successfully defended the {\bf\if@Lisans graduation project\ \fi \if@YuksekLisans thesis\ \fi \if@Doktora dissertation\ \fi}entitled {``{\bf\Baslikbir\ifthenelse{\equal{\Baslikiki}{}}{}{
 	\Baslikiki\ifthenelse{\equal{\Baslikuc}{}}{}{\
 	\Baslikuc}}}''}, which he/she prepared after fulfilling the
