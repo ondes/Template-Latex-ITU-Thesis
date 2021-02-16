@@ -226,9 +226,9 @@
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@FenBilimleri
-      \def\th@Enstitu{Fen B\. il\. imler\. i Enst\. it\"us\"u}
-      \def\th@Institute{Graduate School of Science}
-      \def\th@Instituteiki{Engineering and Technology} 			% FBE ingilizce yeni baslik icin
+      \def\th@Enstitu{L\.isansüstü Eğ\.it\.im Enst\.itüsü}
+      \def\th@Institute{Graduate School}
+      \def\th@Instituteiki{} 			% FBE ingilizce yeni baslik icin
     \fi
     \if@SosyalBilimler
       \def\th@Enstitu{Sosyal B\. il\. imler Enst\. it\"us\"u}
