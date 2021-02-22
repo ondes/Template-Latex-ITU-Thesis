@@ -22,37 +22,41 @@
 \DeclareOption{oneside}{\ClassWarning{itutez}{Option 'oneside' superfluous. Ignored.}}
 
 %====================================== TEZ DERLEME SEÇENEKLERİ ======================================
-\newif\if@Onluarkali
+% LANGUAGE:
 \newif\if@Ingilizce
 \@Ingilizcefalse
+\DeclareOption{ingilizce}{\@Ingilizcetrue}
+\DeclareOption{turkce}{\@Ingilizcefalse}
+% DEGREE:
 \newif\if@Doktora
 \newif\if@YuksekLisans
 \newif\if@Lisans
+\DeclareOption{doktora}{\@Doktoratrue}
+\DeclareOption{yukseklisans}{\@YuksekLisanstrue}
+\DeclareOption{lisans}{\@Lisanstrue}
+% PRINT TYPE:
+\newif\if@Onluarkali
 \newif\if@Bez
+\@Bezfalse
+\DeclareOption{onluarkali}{\PassOptionsToClass{twoside}{report}\@Onluarkalitrue}
+\DeclareOption{karton}{\@Bezfalse}
+\DeclareOption{bez}{\@Beztrue}
+% INSTITUTE- FOR GRADUATE DEGREES:
 \newif\if@Bilisim
 \newif\if@Avrasya
 \newif\if@FenBilimleri
-\newif\if@UcakUzay
-\newif\if@ElektrikElektronik 								% Elektrik-Elektronik Fakültesi - SBÖ
 \newif\if@SosyalBilimler
 \newif\if@Enerji
-\@Bezfalse
-\DeclareOption{onluarkali}{\PassOptionsToClass{twoside}{report}\@Onluarkalitrue}
-\DeclareOption{ingilizce}{\@Ingilizcetrue}
-\DeclareOption{doktora}{\@Doktoratrue}
-\DeclareOption{turkce}{\@Ingilizcefalse}
-\DeclareOption{yukseklisans}{\@YuksekLisanstrue}
-\DeclareOption{lisans}{\@Lisanstrue}
-\DeclareOption{karton}{\@Bezfalse}
-\DeclareOption{bez}{\@Beztrue}
 \DeclareOption{bilisim}{\@Bilisimtrue}
 \DeclareOption{avrasya}{\@Avrasyatrue}
 \DeclareOption{fenbilimleri}{\@FenBilimleritrue}
-\DeclareOption{ucakuzay}{\@UcakUzaytrue}
-\DeclareOption{elektrikelektronik}{\@ElektrikElektroniktrue} % Elektrik-Elektronik Fakültesi - SBÖ
 \DeclareOption{sosyalbilimler}{\@SosyalBilimlertrue}
 \DeclareOption{enerji}{\@Enerjitrue}
-
+% FACULTY - FOR UNDERGRADUATE DEGREES:
+\newif\if@UcakUzay
+\newif\if@ElektrikElektronik 								% Elektrik-Elektronik Fakültesi - SBÖ
+\DeclareOption{ucakuzay}{\@UcakUzaytrue}
+\DeclareOption{elektrikelektronik}{\@ElektrikElektroniktrue} 			% Elektrik-Elektronik Fakültesi - SBÖ
 \ProcessOptions
 %=================================== LOADING CLASS AND PACKAGES =====================================
 \LoadClass[a4paper,onecolumn,12pt]{report}[1996/10/31]
@@ -64,13 +68,13 @@
 \RequirePackage{calc}
 \RequirePackage{appendix}
 \usepackage[absolute]{textpos}
-\usepackage{lscape} 				% Landscape package
+\usepackage{lscape} 										% Landscape package
 \usepackage{url}
 
 %========================================= CAPTION SETTINGS =========================================
 \captionsetup [table]{position=top, aboveskip=0.3truecm, belowskip=6pt}
 \captionsetup [figure]{position=bottom, labelsep=colon, aboveskip=0.0truecm, belowskip=0.0truecm}
-\DeclareCaptionLabelSeparator{colon}{ \bfseries: } % Proper colomn separation in the figure labels - SBÖ
+\DeclareCaptionLabelSeparator{colon}{ \bfseries: } 				% Proper colomn separation in the figure labels - SBÖ
 
 %========================================== PAGE SETTINGS ===========================================
 % Setting of even pages that do not have page numbers and odd page setting that does have a page number - SBÖ
@@ -78,10 +82,10 @@
   \clearpage
   \if@twoside
     \ifodd
-      \c@page 						% Count the page - SBÖ
+      \c@page 											% Count the page - SBÖ
     \else
       \hbox{}
-      \thispagestyle{empty} 		% Empty even pages and do not include numbering in even pages - SBÖ
+      \thispagestyle{empty} 									% Empty even pages and do not include numbering in even pages - SBÖ
       \newpage
       \if@twocolumn
 	\hbox{}
@@ -98,7 +102,7 @@
       \c@page
     \else
       \hbox{}
-      %\thispagestyle{empty} 		% Full even pages and include numbering in even pages - SBÖ
+      %\thispagestyle{empty} 								% Full even pages and include numbering in even pages - SBÖ
       \newpage
       \if@twocolumn
 	\hbox{}
@@ -219,43 +223,50 @@
 
 \newcommand*{\unvan}[1]{\th@StoreIn{\th@Unvan}{#1}}
 
-%================================= FACULTY AND INSTITUTES SETTINGS =================================== 
+%====================================== INSTITUTES SETTINGS =========================================
      \if@Bilisim
       \def\th@Enstitu{B\.il\.i\c s\.im Enst\. it\"us\"u}
+      \def\th@EnstituIki{}	
       \def\th@Institute{Informatics Institute}
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@FenBilimleri
       \def\th@Enstitu{L\.isansüstü Eğ\.it\.im Enst\.itüsü}
+      \def\th@EnstituIki{}		
       \def\th@Institute{Graduate School}
-      \def\th@Instituteiki{} 			% FBE ingilizce yeni baslik icin
+      \def\th@Instituteiki{} 									% FBE ingilizce yeni baslik icin
     \fi
     \if@SosyalBilimler
       \def\th@Enstitu{Sosyal B\. il\. imler Enst\. it\"us\"u}
-      \def\th@Institute{The Graduate School of Arts}            % To fill the text properly to the first line - SBÖ
-      \def\th@Instituteiki{and Social Sciences} 				% Added for onay page simplicity - SBÖ
+      \def\th@EnstituIki{}		      
+      \def\th@Institute{The Graduate School of Arts}            			% To fill the text properly to the first line - SBÖ
+      \def\th@Instituteiki{and Social Sciences} 					% Added for onay page simplicity - SBÖ
     \fi
     \if@Enerji
       \def\th@Enstitu{Enerj\. i Enst\. it\"us\"u}
+      \def\th@EnstituIki{}		
       \def\th@Institute{Institute of Energy}
       \def\th@Instituteiki{} 									% Added for onay page simplicity - SBÖ
     \fi
     \if@Avrasya
       \def\th@Enstitu{Avrasya Yer B\. il\. imler\. i Enst\. it\"us\"u}
-      \def\th@Institute{Eurasia Institute of}                   % To fill the text properly to the first line - SBÖ
+      \def\th@EnstituIki{}		
+      \def\th@Institute{Eurasia Institute of}                   				% To fill the text properly to the first line - SBÖ
       \def\th@Instituteiki{Earth Sciences} 						% Added for onay page simplicity - SBÖ
     \fi
+%======================================= FACULTIES SETTINGS =========================================
     \if@UcakUzay
-      \def\th@Enstitu{UÇAK VE UZAY BİLİMLERİ FAKÜLTESİ}
-      \def\th@Institute{FACULTY OF AERONAUTICS AND}
-      \def\th@Instituteiki{ASTRONAUTICS}
+	\def\th@Enstitu{U\c cak ve Uzay B\.imler\.i Fak\"ultes\.i}
+	\def\th@EnstituIki{}		
+	\def\th@Institute{FACULTY OF AERONAUTICS AND}
+	\def\th@Instituteiki{ASTRONAUTICS}
     \fi
-    \if@ElektrikElektronik 										% Added recently - SBÖ
-    \def\th@Enstitu{ELEKTRİK-ELEKTRONİK FAKÜLTESİ}
-    \def\th@Institute{FACULTY OF ELECTRICAL AND}
-    \def\th@Instituteiki{ELECTRONICS}
+    \if@ElektrikElektronik 									% Added recently - SBÖ
+    	\def\th@Enstitu{Elektr\.ik-Elektron\.ik Fak\"ultes\.i}
+	\def\th@EnstituIki{}		
+    	\def\th@Institute{FACULTY OF ELECTRICAL AND}
+    	\def\th@Instituteiki{ELECTRONICS}
     \fi
-
 %================================== ALL PAGES FROM KAPAK TO FORWARD ==================================  
 \newcommand{\kapak}[1]{\th@StoreIn{\th@Kapak}{#1}}
 \if@Bez
@@ -424,7 +435,7 @@
 
 %================================ SAYFA YAPISI İLE İLGİLİ TANIMLAMALAR ================================
 \AtBeginDocument{
-	    \setlength{\paperheight}{297mm}         
+	\setlength{\paperheight}{297mm}         
         \setlength{\voffset}{-0.4mm}            %% 25.4 mm - 0.4 mm = 25 mm from the top - SBÖ 
         %\setlength{\voffset}{0mm}              
         %\setlength{\hoffset}{14.6mm} 
@@ -1039,6 +1050,12 @@ KISALTMALAR\fi\normalfont}
     \if@Avrasya
     \begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
     \fi
+    \if@UcakUzay
+    \begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
+    \fi
+    \if@ElektrikElektronik
+    \begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
+    \fi
     	\singlespacing  					% For single spacing in the top portion of kapak - SBÖ
     	\renewcommand{\ULdepth}{2.75pt} 	% Added using ulem package for \uline command - SBÖ
     	\renewcommand{\ULthickness}{1.5pt} 	% Added for underline tickness change which was 0.4pt - SBÖ
@@ -1046,12 +1063,14 @@ KISALTMALAR\fi\normalfont}
     	\uline{{\bf\th@EnstituUpper}}\\ 	% Instead of \underline{text} - SBÖ
 	\end{textblock*}
 
+    \if@Ingilizce
     \begin{textblock*}{\textwidth}[0,0](40mm,35.5mm)
 	    \renewcommand{\ULdepth}{2.75pt} 	% Added using ulem package for \uline command - SBÖ
 	    \renewcommand{\ULthickness}{1.5pt} 	% Added for underline tickness change which was 0.4pt - SBÖ
 	    \centering
 	    \uline{\MakeUppercase{\bf\th@Instituteiki}}\\ % FBE ingilizce yeni baslik icin
     \end{textblock*}
+    \fi
     
 	\begin{textblock*}{\textwidth}[0,0](40mm,80.5mm)
 		\centering
@@ -1092,31 +1111,39 @@ KISALTMALAR\fi\normalfont}
 \newcommand*{\th@IcKapak}{					% Remodified for better vertical spacing - SBÖ
 	\BolumSagdaKalsin
 	\thispagestyle{empty}
-    \if@FenBilimleri
-    \begin{textblock*}{\textwidth}[0,0](37.5mm,30.5mm)
+	\if@FenBilimleri
+		\begin{textblock*}{\textwidth}[0,0](37.5mm,30.5mm)
 	\fi
 	\if@Bilisim	
-	\begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
+		\begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
 	\fi
 	\if@SosyalBilimler
-	\begin{textblock*}{\textwidth}[0,0](36mm,30.5mm)
-    \fi
-    \if@Avrasya
-    \begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
-    \fi
+		\begin{textblock*}{\textwidth}[0,0](36mm,30.5mm)
+	\fi
+	\if@Avrasya
+		\begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
+	\fi
+	\if@UcakUzay
+		\begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
+	\fi
+	\if@ElektrikElektronik
+		\begin{textblock*}{\textwidth}[0,0](40mm,30.5mm)
+	\fi
 		\singlespacing  					% For single spacing in the top portion of kapak - SBÖ
 		\renewcommand{\ULdepth}{2.75pt} 	% Added using ulem package for \uline command - SBÖ
 		\renewcommand{\ULthickness}{1.5pt} 	% Added for underline tickness change which was 0.4pt - SBÖ
 		\centering
 		\uline{{\bf\th@EnstituUpper}}\\ %Instead of \underline{text} - SBÖ
 	\end{textblock*}
-		
+	
+	\if@Ingilizce
 	\begin{textblock*}{\textwidth}[0,0](40mm,35.5mm)
 		\renewcommand{\ULdepth}{2.75pt} 	% Added using ulem package for \uline command - SBÖ
 		\renewcommand{\ULthickness}{1.5pt} 	% Added for underline tickness change which was 0.4pt - SBÖ
 		\centering
 		\uline{\MakeUppercase{\bf\th@Instituteiki}}\\ % FBE ingilizce yeni baslik icin
 	\end{textblock*}
+	\fi
       
 	\begin{textblock*}{\textwidth}[0,0](40mm,80.5mm)
 		\centering
@@ -1238,7 +1265,7 @@ KISALTMALAR\fi\normalfont}
 	\if@Ingilizce 			
 	\begin{textblock*}{\textwidth}[0,0](40mm,50.5mm)
 	{\th@isimsoyisim}, { a} \if@Doktora { Ph.D.}\ \fi  \if@YuksekLisans  { M.Sc.}\ \fi \if@Lisans { B.Sc.}\ \fi student of
-	ITU~\if@YuksekLisans {\th@Institute~\th@Instituteiki\ \fi \if@Doktora \th@Institute~\th@Instituteiki\ \fi \if@Lisans \if@ElektrikElektronik \th@Institute~\th@Instituteiki \fi \fi}student ID \th@ogrencino,\ successfully defended the {\if@Lisans graduation project\ \fi \if@YuksekLisans thesis\ \fi \if@Doktora dissertation\ \fi}entitled {``{\Baslikbir\ifthenelse{\equal{\Baslikiki}{}}{}{
+	ITU~\if@Doktora {\th@Institute~\th@Instituteiki}\ \fi \if@YuksekLisans {\th@Institute~\th@Instituteiki}\ \fi \if@Lisans {\th@Institute~\th@Instituteiki}\ \fi student ID \th@ogrencino,\ successfully defended the {\if@Doktora dissertation\ \fi \if@YuksekLisans thesis\ \fi \if@Lisans graduation project\ \fi }entitled {``{\Baslikbir\ifthenelse{\equal{\Baslikiki}{}}{}{
 	\Baslikiki\ifthenelse{\equal{\Baslikuc}{}}{}{\
 	\Baslikuc}}}''}, which he/she prepared after fulfilling the
 	requirements specified in the associated legislations,
@@ -1579,6 +1606,7 @@ KISALTMALAR\fi\normalfont}
           \usecounter{enumiv}
           \let\p@enumiv\@empty
           \renewcommand\theenumiv{\@arabic\c@enumiv}}
+          
     \sloppy
     \clubpenalty4000
     \@clubpenalty \clubpenalty
