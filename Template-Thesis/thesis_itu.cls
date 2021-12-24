@@ -1521,46 +1521,46 @@ KISALTMALAR\fi\normalfont}
     }
 
 %======================================== LOT PAGE SETTINGS =========================================== - SBÖ
-\renewcommand\listoftables{
+\renewcommand\listoftables{%
     %\vspace*{\ChapterUstenBosluk} 				% This is not effective - SBÖ   
-    {\chapter*{\listtablename}
-    \vspace*{-18pt}
-    \renewcommand{\ULdepth}{4pt} 				% Added using ulem package for \uline command - SBÖ
-    \renewcommand{\ULthickness}{1.5pt} 			% Added for underline tickness change which was 0.4pt - SBÖ
+    {\chapter*{\listtablename}%
+    \vspace*{-18pt}%
+    \renewcommand{\ULdepth}{4pt}% 				 Added using ulem package for \uline command - SBÖ
+    \renewcommand{\ULthickness}{1.5pt}% 	 Added for underline tickness change which was 0.4pt - SBÖ
     \if@Ingilizce\hfill\vspace*{0truecm}{\bf\uline{Page}}~\else~\hfill\vspace*{0truecm}{\bf\uline{Sayfa}}\fi}\\ % Instead of \underline{text} - SBÖ
     %\hfill\vspace*{0.5truecm}{\bf\underline{\if@Ingilizce Page\else Sayfa\fi}}} % Removed - SBÖ
 
-    \let\orig@numberline\numberline   
-    \@mkboth{\MakeUppercase\listtablename}{\MakeUppercase\listtablename}
-    \renewcommand*{\numberline}[1]{
-    \orig@numberline{\bf\tablename\ ##1}\hspace{-8pt}{\bf:}\hspace{4pt}} % Better spacing - SBÖ
-    \addcontentsline{toc}{part}{\bf{\protect\listtablenameToC}}
-    \setlength{\th@oldparskip}{\parskip}
-    \setlength{\parskip}{\LoTparskip}
-    \@starttoc{lot}
-    \setlength{\parskip}{\th@oldparskip}
+    \let\orig@numberline\numberline
+    \@mkboth{\MakeUppercase\listtablename}{\MakeUppercase\listtablename}%
+    \renewcommand*{\numberline}[1]{%
+    \orig@numberline{\bf\tablename\ ##1}\hspace{-8pt}{\bf:}\hspace{4pt}}%  Better spacing - SBÖ
+    \addcontentsline{toc}{part}{\bf{\protect\listtablenameToC}}%
+    \setlength{\th@oldparskip}{\parskip}%
+    \setlength{\parskip}{\LoTparskip}%
+    \@starttoc{lot}%
+    \setlength{\parskip}{\th@oldparskip}%
     \let\numberline\orig@numberline
     }
 
 %======================================== LOF PAGE SETTINGS =========================================== - SBÖ  
-\renewcommand\listoffigures{
+\renewcommand\listoffigures{%
     %\vspace*{\ChapterUstenBosluk} 				% This is not effective - SBÖ
-    {\chapter*{\listfigurename}
-    \vspace*{-18pt}
-    \renewcommand{\ULdepth}{4pt} 				% Added using ulem package for \uline command - SBÖ
-    \renewcommand{\ULthickness}{1.5pt} 			% Added for underline tickness change which was 0.4pt - SBÖ
+    {\chapter*{\listfigurename}%
+    \vspace*{-18pt}%
+    \renewcommand{\ULdepth}{4pt}%				  Added using ulem package for \uline command - SBÖ
+    \renewcommand{\ULthickness}{1.5pt}% 	Added for underline tickness change which was 0.4pt - SBÖ
     \if@Ingilizce\hfill\vspace*{0truecm}{\bf\uline{Page}}~\else~\hfill\vspace*{0truecm}{\bf\uline{Sayfa}}\fi}\\ % Instead of \underline{text} - SBÖ
     %\hfill\vspace*{0.5truecm}{\bf\underline{\if@Ingilizce Page\else Sayfa\fi}}}
 
     \let\orig@numberline\numberline
-    \@mkboth{\MakeUppercase\listfigurename}{\MakeUppercase\listfigurename}
-    \renewcommand*{\numberline}[1]{
-    \orig@numberline{\bf\figurename\ ##1}\hspace{-8pt}{\bf:}\hspace{4pt}} % Better spacing - SBÖ
-    \addcontentsline{toc}{part}{\bf{\protect\listfigurenameToC}}
-    \setlength{\th@oldparskip}{\parskip}
-    \setlength{\parskip}{\LoFparskip}
-    \@starttoc{lof}
-    \setlength{\parskip}{\th@oldparskip}
+    \@mkboth{\MakeUppercase\listfigurename}{\MakeUppercase\listfigurename}%
+    \renewcommand*{\numberline}[1]{%
+    \orig@numberline{\bf\figurename\ ##1}\hspace{-8pt}{\bf:}\hspace{4pt}}%  Better spacing - SBÖ
+    \addcontentsline{toc}{part}{\bf{\protect\listfigurenameToC}}%
+    \setlength{\th@oldparskip}{\parskip}%
+    \setlength{\parskip}{\LoFparskip}%
+    \@starttoc{lof}%
+    \setlength{\parskip}{\th@oldparskip}%
     \let\numberline\orig@numberline
     }
 
